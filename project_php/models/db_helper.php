@@ -5,7 +5,13 @@
  abstract class db_helper extends db_connect implements db_general_function{
 
 
- 	function insert(){}
+ 	function insert($table,$columns,$values){
+
+ 		$sql="insert into users ($columns) values($values)";
+		//echo $sql; 
+ 		return $this->conn->query($sql) or die($this->$conn->error);	 
+
+ 	}
  	function update(){}
  	function delete(){}
  	function select($col,$tab,$condition){
