@@ -18,7 +18,12 @@
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Features Items</h2>
 						<?php 
-							$result = $obj->show_products();
+
+						//pre($_GET);
+						$id=$_GET['id'];
+						//echo $id;
+
+							$result = $obj->show_categorywise_products($id);
 
 							//pre($result);
 							if(is_array($result)):

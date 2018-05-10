@@ -15,7 +15,7 @@
 
 									?>
 
-									<li><a href="#"> <span class="pull-right">(50)</span>
+									<li><a href="filter_category.php?id=<?echo $val['ca_id']?>"> <span class="pull-right">(50)</span>
 									<?php
 
 										echo $val['ca_name'];
