@@ -28,6 +28,13 @@
 					echo "password does not match";
 				}
 				else{
+					$_SESSION['project_uid']=$result[0]['us_id'];
+					$_SESSION['project_usname']=$result[0]['us_name'];
+					$_SESSION['project_usemail']=$result[0]['us_email'];
+					$_SESSION['project_usmobile']=$result[0]['us_mobile'];
+
+					//print_r($_SESSION);
+
 					echo "ok";
 				}
 
