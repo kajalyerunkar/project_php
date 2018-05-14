@@ -1,4 +1,10 @@
 <?php 
+
+	if(session_id()== ""){
+		session_start();
+		//echo session_id();
+	}
+
 	 require_once "db_functions.php";
 	 interface db_parameter{
 	 	const HOSTNAME = "localhost";
@@ -15,4 +21,6 @@
  	function select($col,$tab,$condition);
 	 
 	 }
+
+
 ?>
