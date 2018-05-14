@@ -117,15 +117,30 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Home</a></li>
+								<li><a href="index.php" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">userpanel<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-<li><a href="login.php">login</a></li>
-<li><a href="shop.html">forgot password</a></li>
-<li><a href="shop.html">logout</a></li>
-<li><a href="shop.html">add category</a></li>
-<li><a href="shop.html">add product</a></li>
-<li><a href="shop.html">add brands</a></li>
+
+                                  <?php 
+                                  //pre($_SESSION);
+                                  	if(!isset($_SESSION['project_usname'])):
+
+                                  ?>
+								<li><a href="login.php">login</a></li>
+								<?php 
+									endif;
+								?>
+								<?php 
+									if(isset($_SESSION['project_usname'])):
+								?>
+								<li><a href="shop.php">forgot password</a></li>
+								<li><a href="logout.php">logout</a></li>
+								<li><a href="change_password.php">change password</a></li>
+								<li><a href="shop.php">add product</a></li>
+								<li><a href="shop.php">add brands</a></li>
+								<?php 
+									endif;
+								?>
 										
                                     </ul>
                                 </li> 
