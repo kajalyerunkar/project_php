@@ -12,15 +12,14 @@
 			<div class="col-md-4 text-center">
 				<div class="signup-form"><!--sign up form-->
 					<h2>change password</h2>
-					<form id="register_form">
-					<!-- <input type="text" name="username" placeholder="enter name" /> -->
-					<input type="text" name="useremail" placeholder="enter emailid"/>
-					<!-- <input type="text" name="usernumber" placeholder="enter mobile number" /> -->
-					<input type="text" name="userpassword" placeholder="enter new password" />
-					<input type="text" name="usercpassword" placeholder="enter confirm new password" />
+					<form id="update_form">
+					
+					<input type="text" name="cpass" placeholder="enter current password"/>	
+					<input type="text" name="npass" placeholder="enter new password"/>
+					<input type="text" name="cnpass" placeholder="enter confirm password"/>
 
-
-					<button type="button" class="btn btn-default btn-register">register</button>
+					<button type="button" class="btn btn-default btn-update">update</button>
+					<div class="msg_update"></div>
 					</form>
 				</div>
 			</div>

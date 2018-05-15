@@ -12,7 +12,11 @@
  		return $this->conn->query($sql) or die($this->$conn->error);	 
 
  	}
- 	function update(){}
+ 	function update($table,$record,$condition){
+ 		$sql="update $table set $record where $condition";
+		//echo $sql; 
+ 		return $this->conn->query($sql) or die($this->$conn->error);	 
+ 	}
  	function delete(){}
  	function select($col,$tab,$condition){
  		//echo "selete call";

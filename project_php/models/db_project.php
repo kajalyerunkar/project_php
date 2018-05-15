@@ -60,6 +60,16 @@
 			);
 		}
 
+		function get_password_userwise($email){
+
+			return db_helper::select(
+				"us_password","users","us_email='$email'");
+		}
+		function update_password($pass,$email){
+			//update users set us_password ='$newpass' where us_email='$email'
+			return $this->update("users","us_password='$pass'","us_email='$email'");
+		}
+
 	}
 
 	$obj=new db_project();
