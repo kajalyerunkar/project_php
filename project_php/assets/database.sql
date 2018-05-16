@@ -12,12 +12,7 @@ create table categories(
 	ca_name varchar(100)
 
 );
-create table product(
 
-	pr_id int auto_increment primary key,
-	pr_name varchar(100)
-
-);
 
 create table products(
 	pro_id int auto_increment,
