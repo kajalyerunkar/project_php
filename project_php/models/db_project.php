@@ -70,6 +70,32 @@
 			return $this->update("users","us_password='$pass'","us_email='$email'");
 		}
 
+		function check_brand_count($brname){
+
+			//echo $email;
+			//select count(*) from users where us_email="$email"
+ 
+			return self::select(
+			"count(*) as cnt","brands","br_name='$brname'"
+		);
+
+		}
+
+		function brand_insert($name){
+			// echo $name;
+			return parent::insert(
+				"brands",
+				"br_name",
+				"'$name'"
+			);
+		}
+		function show_cart_records($pro){
+			// echo $pro;
+			// select *from products where pro_id= 6 or pro_id=5 or pro_id=4
+			// select * from products where pro_id in(5,4,4)
+			return $this->select("*","products","pro_id in($pro) order by pro_id desc");
+		}
+
 	}
 
 	$obj=new db_project();

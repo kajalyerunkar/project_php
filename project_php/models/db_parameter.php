@@ -10,7 +10,7 @@
 	 	const HOSTNAME = "localhost";
 	 	const  USER= "root";
 	 	const  PASSWORD= "";
-	 	const DATABASE = "github";
+	 	const DATABASE = "eshopper_project";
 	 }
 
 	 interface db_general_function{

@@ -7,8 +7,8 @@
 
  	function insert($table,$columns,$values){
 
- 		$sql="insert into users ($columns) values($values)";
-		//echo $sql; 
+ 		$sql="insert into $table ($columns) values($values)";
+		// echo $sql; 
  		return $this->conn->query($sql) or die($this->$conn->error);	 
 
  	}
