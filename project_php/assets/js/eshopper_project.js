@@ -28,4 +28,62 @@ $(document).ready(function(){
 		})
 
 	})
+	// //////////////////////
+	$(".add-to-cart").click(function(anch_obj){
+		//alert(1111);
+		//console.log(anch_obj);
+		anch_obj.preventDefault();
+		//console.log($(this));
+		//console.log($(this).attr("for"));
+		proid=$(this).attr("for");
+		//alert(proid);
+		$.post("../controllers/cart-action.php","x="+proid).success(
+		function(response){
+			//alert(response);
+
+		$(".cart_count").html(response);
+		//alert("product updated in cart");
+		$("html,body").animate({
+			"scrollTop":0
+		},1000);
+	
+
+		$(".cart_toast_msg").fadeIn(1000);
+		setTimeout(function(){
+			$(".cart_toast_msg").fadeOut(1000);
+		},3000)
+	})
+
+	})
+	/////////////////////////
+
+	$(".delete-to-cart").click(function(anch_obj){
+		curtag=$(this);
+		anch_obj.preventDefault();
+		//console.log($(this));
+		//console.log($(this).attr("for"));
+		proid=$(this).attr("for");
+		//alert(proid);
+		$.post("../controllers/delete-action.php","x="+proid).success(
+		function(response){
+			//console.log(response);
+
+		$(".cart_count").html(response);
+		//alert("product updated in cart");
+		$("html,body").animate({
+			"scrollTop":0
+		},1000);
+	
+
+		$(".cart_toast_msg").fadeIn(1000);
+		setTimeout(function(){
+			$(".cart_toast_msg").fadeOut(1000);
+		},3000)
+
+		curtag.parent().parent().parent().parent().parent().fadeOut(500)
+	})
+
+
+
+	})
 })

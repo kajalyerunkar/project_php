@@ -7,4 +7,13 @@ $(document).ready(function(){
 			$(".msg_update").html(res);
 		})
 	})
+
+	$(".btn-brand").click(function(){
+
+		record =$("#brand_form").serialize();
+		//console.log(record);
+		$.post("../controllers/brand-action.php",record).success(function(res){
+			$(".msg_brand").html(res);
+		})
+	})
 })
