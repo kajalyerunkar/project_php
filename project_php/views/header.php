@@ -159,7 +159,7 @@
 								<li><a href="shop.php">forgot password</a></li>
 								<li><a href="logout.php">logout</a></li>
 								<li><a href="change_password.php">change password</a></li>
-								<li><a href="shop.php">add product</a></li>
+								<li><a href="add-product.php">add product</a></li>
 								<li><a href="add-brand.php">add brands</a></li>
 								<?php 
 									endif;
