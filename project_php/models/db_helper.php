@@ -9,7 +9,7 @@
 
  		$sql="insert into $table ($columns) values($values)";
 		// echo $sql; 
- 		return $this->conn->query($sql) or die($this->$conn->error);	 
+ 		return $this->conn->query($sql) or die($this->conn->error);	 
 
  	}
  	function update($table,$record,$condition){

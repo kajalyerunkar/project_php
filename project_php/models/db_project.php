@@ -96,6 +96,11 @@
 			return $this->select("*","products","pro_id in($pro) order by pro_id desc");
 		}
 
+		function product_insert($rec){
+			return parent::insert("products",
+				"pro_name,pro_price,pro_discount,pro_caid,pro_brid,pro_description,pro_path","'$rec[0]','$rec[1]','$rec[2]','$rec[3]','$rec[4]','$rec[5]','$rec[6]'");
+		}
+
 	}
 
 	$obj=new db_project();

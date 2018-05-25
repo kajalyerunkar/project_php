@@ -3,7 +3,7 @@
 
 
 	abstract class db_connect implements db_parameter{
-		protected $conn="";
+		public $conn="";
 		function __construct(){
 			//self::HOSTNAME,echo "	connection";
 			//mysqli_connect()

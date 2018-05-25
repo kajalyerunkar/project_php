@@ -23,7 +23,7 @@
 							
 							<input type="text" name="pro_discount" placeholder="20 in %" /><br><br>
 							<select name="pro_caid">
-								<option>please select categories</option>
+								<option value="">please select categories</option>
 								<?php 
 								$res=$obj->show_category();
 								pre($res);
@@ -38,7 +38,7 @@
 							</select><br><br>
 
 							<select name="pro_brid">
-								<option>please select brand</option>
+								<option value="">please select brand</option>
 								<?php 
 								$res=$obj->show_brands();
 								pre($res);
