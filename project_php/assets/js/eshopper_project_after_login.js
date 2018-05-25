@@ -24,7 +24,7 @@ $(document).ready(function(){
 		//alert(1);
 		//create an obj of form data
 		dataobj = new FormData(formobj);
-		alert(dataobj);
+		//alert(dataobj);
 		$.ajax({
 			
 			data:dataobj,
