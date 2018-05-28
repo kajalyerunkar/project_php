@@ -47,3 +47,9 @@ create table users(
 	us_time timestamp
 
 );
+
+create table wishlist(
+	wi_id int auto_increment primary key,
+	wi_uid int,
+	wi_pid int
+);
