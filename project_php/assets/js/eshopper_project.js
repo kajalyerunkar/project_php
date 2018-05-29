@@ -81,9 +81,10 @@ $(document).ready(function(){
 		},3000)
 
 		curtag.parent().parent().parent().parent().parent().fadeOut(500)
-	})
+			})
+		})
 
-	})
+
 	$(".add-to-wishlist").click(function(anch_obj){
 		anch_obj.preventDefault();
 		//alert(1);
@@ -103,4 +104,19 @@ $(document).ready(function(){
 			}
 		})
 	})
+	
+
+	$(".delete-to-wishlist").click(function(anch_obj){
+		//alert(1);
+			curtag=$(this);
+
+			anch_obj.preventDefault();
+
+			proid=$(this).attr("for");
+			$.post("../controllers/delete-wishlist-action.php","x="+proid).success(function(response){
+
+				curtag.parent().parent().parent().parent().parent().fadeOut(500)
+		});
+     })
 })
+
