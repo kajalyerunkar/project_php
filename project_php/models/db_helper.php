@@ -17,7 +17,11 @@
 		//echo $sql; 
  		return $this->conn->query($sql) or die($this->$conn->error);	 
  	}
- 	function delete(){}
+ 	function delete($table,$condition){
+ 		$sql="delete from $table where $condition";
+
+ 		return $this->conn->query($sql) or die($this->$conn->error);
+ 	}
  	function select($col,$tab,$condition){
  		//echo "selete call";
  		 $sql="select $col from $tab where $condition";

@@ -17,7 +17,7 @@
 
 	function insert($table,$columns,$values);
  	function update($table,$record,$condition);
- 	function delete();
+ 	function delete($table,$condition);
  	function select($col,$tab,$condition);
 	 
 	 }
